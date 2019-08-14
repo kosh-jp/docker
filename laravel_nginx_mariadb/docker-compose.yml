@@ -19,8 +19,8 @@ services:
     - php
 
   db:
-    image: mysql:5.7
-    container_name: db-host
+    image: mariadb
+    container_name: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: database
@@ -29,8 +29,8 @@ services:
       TZ: 'Asia/Tokyo'
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-    - ./docker/db/data:/var/lib/mysql
     - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
-    - ./docker/db/sql:/docker-entrypoint-initdb.d
+    - ./docker/db/data:/var/lib/mysql
+    - ./docker/db/init:/docker-entrypoint-initdb.d
     ports:
     - 3306:3306
