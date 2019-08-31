@@ -1,5 +1,5 @@
 # summary
-laravel ON nginx/php-fpm/mysql
+laravel ON nginx/php-fpm/mariadb
 
 # start
 ```
