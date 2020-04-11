@@ -3,7 +3,7 @@ COPY php.ini /usr/local/etc/php/
 
 RUN apt-get update \
   && apt-get install -y zlib1g-dev libzip-dev default-mysql-client  \
-  && docker-php-ext-install zip pdo_mysql
+  && docker-php-ext-install zip pdo_mysql mbstring exif
 
 #Composer install
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
