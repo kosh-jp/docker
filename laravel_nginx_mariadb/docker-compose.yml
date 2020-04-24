@@ -43,6 +43,6 @@ services:
       TZ: "Asia/Tokyo"
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-      - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/db/conf:/etc/mysql/conf.d
       - ./docker/db/data:/var/lib/mysql
       - ./docker/db/init:/docker-entrypoint-initdb.d
