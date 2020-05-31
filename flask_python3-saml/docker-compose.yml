@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8000:8000"
+    volumes:
+      - "./python3-saml/demo-flask:/demo-flask"
+    tty: true
+    environment:
+      TZ: Asia/Tokyo
