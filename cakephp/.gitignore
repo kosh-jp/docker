@@ -1,0 +1,3 @@
+/docker/db/*
+/docker/https-portal/*
+!/docker/db/conf
