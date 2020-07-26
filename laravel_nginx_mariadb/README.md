@@ -7,9 +7,9 @@ bash start.sh
 ```
 ## if can't use start.sh
 ```
+cp .env_default .env
 docker-compose up -d
-docker-compose exec php bash
-laravel new
+docker-compose exec php laravel new;
 ```
 
 # DB settings
