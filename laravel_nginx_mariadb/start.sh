@@ -1,1 +1,1 @@
-docker-compose up -d;docker-compose exec php laravel new;cp .env_default .env;
+cp .env_default .env;docker-compose up -d;docker-compose exec php laravel new;
