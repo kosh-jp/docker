@@ -1,15 +1,14 @@
 # summary
 laravel ON nginx/php-fpm/mariadb
 
-# start
+# initial
+```
+bash init.sh
+```
+
+# restart project
 ```
 bash start.sh
-```
-## if can't use start.sh
-```
-cp .env_default .env
-docker-compose up -d
-docker-compose exec php laravel new;
 ```
 
 # DB settings
