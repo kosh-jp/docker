@@ -16,11 +16,11 @@ services:
       - 443:443
     restart: always
     environment:
-      # DOMAINS: "your.domain -> http://python:5000"
-      # STAGE: "production"
+      DOMAINS: "hisafi.com, shamemo.com -> http://python:5000"
+      STAGE: "production"
       # FORCE_RENEW: 'true'
-      DOMAINS: "localhost -> http://python:5000"
-      STAGE: "local"
+      # DOMAINS: "localhost -> http://python:5000"
+      # STAGE: "local"
     volumes:
       - ./docker/https-portal:/var/lib/https-portal
       - /var/www/html:/var/www/vhosts
