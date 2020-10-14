@@ -1,4 +1,4 @@
 /docker/db/*
 !/docker/db/conf
-/docker/https-potal/*
+/docker/https-portal/*
 /.env
