@@ -23,9 +23,6 @@ services:
       - 443:443
     restart: always
     environment:
-      # DOMAINS: "your.domain -> http://nginx"
-      # STAGE: "production"
-      # FORCE_RENEW: 'true'
       DOMAINS: "localhost -> http://nginx"
       STAGE: "local"
     volumes:
