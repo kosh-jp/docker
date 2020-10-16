@@ -1,0 +1,22 @@
+{
+  "name": "kosh/phpcheck",
+  "scripts": {
+    "ci": [
+      "@cs",
+      "@stan"
+    ],
+    "cs": [
+      "phpcs . --colors -p"
+    ],
+    "stan": [
+      "phpstan analyze ."
+    ]
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "phpstan/phpstan": "^0.12.50"
+  },
+  "config": {
+    "lock": false
+  }
+}

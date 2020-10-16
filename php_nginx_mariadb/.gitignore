@@ -2,3 +2,4 @@
 !/docker/db/conf
 /docker/https-portal/*
 /.env
+/src/vendor
