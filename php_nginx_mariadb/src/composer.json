@@ -1,5 +1,8 @@
 {
   "name": "kosh/phpcheck",
+  "type": "project",
+  "license": "MIT",
+  "description": "practice PHP CI",
   "scripts": {
     "ci": [
       "@cs",
