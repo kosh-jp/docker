@@ -1,4 +1,8 @@
 /docker/db/*
+/docker/minio/*
+/docker/redis/*
 !/docker/db/conf
-/docker/https-portal/*
+/docker/https-portal
+/src/.vscode
 /.env
+/.idea

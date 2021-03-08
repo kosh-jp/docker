@@ -1,4 +1,6 @@
+#!/bin/bash
 cp .env_default .env;
+source .env
 docker-compose up -d;
 docker-compose exec php composer install;
 cp src/.env.local src/.env;
