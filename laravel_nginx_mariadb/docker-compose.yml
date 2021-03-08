@@ -46,3 +46,30 @@ services:
       - ./docker/db/conf:/etc/mysql/conf.d
       - ./docker/db/data:/var/lib/mysql
       - ./docker/db/init:/docker-entrypoint-initdb.d
+
+  # in local redis
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    volumes:
+      - ./docker/redis/data:/data
+
+  # in local minio(S3)
+  minio:
+    image: minio/minio:latest
+    ports:
+      - 19000:9000
+    volumes:
+      - ./docker/minio/data:/export
+      - ./docker/minio/config:/root/.minio
+    environment:
+      MINIO_ACCESS_KEY: access
+      MINIO_SECRET_KEY: password
+    command: server /export
+
+  # in local mailhog
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
